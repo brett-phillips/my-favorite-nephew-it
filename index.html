@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Nephew IT Service - Professional IT Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+        
+        .title-line1 {
+            display: block;
+        }
+        
+        .title-line2 {
+            display: block;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #11998e, #38ef7d);
+        }
+
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .contact-method {
+            padding: 30px 20px;
+            border: 2px solid #f0f0f0;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .contact-method h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .phone-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .sms-opt-in {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sms-opt-in::before {
+            content: '📱';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .sms-opt-in h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .sms-opt-in .phone-highlight {
+            font-size: 2.2rem;
+            font-weight: bold;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 15px 0;
+        }
+
+        .legal-text {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: #666;
+            border-left: 4px solid #667eea;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .contact-section {
+                padding: 30px 20px;
+            }
+            
+            .sms-opt-in {
+                padding: 25px;
+            }
+            
+            .phone-highlight {
+                font-size: 1.8rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>
+                <span class="title-line1">My Favorite Nephew</span>
+                <span class="title-line2">IT Service</span>
+            </h1>
+            <p>365 & 24/7 professional IT support and troubleshooting. Get expert tech help as much as you want for only $50/month via text!</p>
+            
+            <div class="sms-opt-in" style="margin: 40px auto 0; max-width: 600px;">
+                <h3>🚀 Get Instant IT Help via Text!</h3>
+                <p>Text us your tech problems and get expert solutions fast!</p>
+                
+                <div class="phone-highlight">(555) 123-4567</div>
+                
+                <p><strong>Just text us and describe your IT issue - we'll guide you through the solution step by step!</strong></p>
+                
+                <div class="legal-text">
+                    <strong>SMS Terms:</strong> By texting this number, you agree to receive SMS support from My Favorite Nephew IT Service. Message frequency varies based on your needs. Message & data rates may apply. Reply STOP to opt out at any time. Reply HELP for support information.
+                </div>
+            </div>
+        </div>
+
+        <div class="services">
+            <div class="service-card">
+                <span class="service-icon">💻</span>
+                <h3>Computer Troubleshooting</h3>
+                <p>Hardware issues, software problems, performance optimization, and system repairs for all your devices.</p>
+            </div>
+            
+            <div class="service-card">
+                <span class="service-icon">🌐</span>
+                <h3>Network & WiFi Support</h3>
+                <p>Internet connectivity issues, router setup, WiFi optimization, and network security configuration.</p>
+            </div>
+            
+            <div class="service-card">
+                <span class="service-icon">📱</span>
+                <h3>Mobile Device Help</h3>
+                <p>Smartphone and tablet setup, app troubleshooting, data transfer, and mobile security assistance.</p>
+            </div>
+            
+            <div class="service-card">
+                <span class="service-icon">🔒</span>
+                <h3>Security & Backup</h3>
+                <p>Antivirus setup, data backup solutions, password management, and cybersecurity consultation.</p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Why Choose Text Support?</h2>
+            
+            <div style="background: #fff; padding: 30px; border-radius: 15px; margin-top: 30px; border: 2px solid #e9ecef;">
+                <h3 style="color: #333; margin-bottom: 20px;">Text-Based IT Support Benefits</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: left;">
+                    <div>
+                        <strong>⚡ Instant Response</strong><br>
+                        <small style="color: #666;">Get help immediately via text message</small>
+                    </div>
+                    <div>
+                        <strong>📝 Clear Instructions</strong><br>
+                        <small style="color: #666;">Step-by-step guidance you can follow</small>
+                    </div>
+                    <div>
+                        <strong>💬 Convenient</strong><br>
+                        <small style="color: #666;">No need to stay on hold or schedule calls</small>
+                    </div>
+                    <div>
+                        <strong>📱 Always Available</strong><br>
+                        <small style="color: #666;">Text us anytime you need IT help</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 My Favorite Nephew IT Service. Professional IT support you can trust.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Serving customers with reliable technology solutions and expert guidance.</p>
+        </div>
+    </div>
+</body>
+</html>

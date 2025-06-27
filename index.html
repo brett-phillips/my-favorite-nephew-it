@@ -212,6 +212,16 @@
             margin-top: 20px;
         }
 
+        .phone-highlight:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            cursor: pointer;
+        }
+
+        .phone-highlight:active {
+            transform: scale(0.98);
+        }
+
         .footer {
             text-align: center;
             color: white;
@@ -259,7 +269,9 @@
                 <h3>🚀 Get Instant IT Help via Text!</h3>
                 <p>Text us your tech problems and get expert solutions fast!</p>
                 
-                <div class="phone-highlight">(330) 482-7885</div>
+                <a href="sms:(330) 482-7885" class="phone-highlight" style="text-decoration: none; color: inherit; display: inline-block; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                    (330) 482-7885
+                </a>
                 
                 <p><strong>Just text us and describe your IT issue - we'll guide you through the solution step by step!</strong></p>
                 
